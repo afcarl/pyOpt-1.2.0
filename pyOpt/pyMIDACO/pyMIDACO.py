@@ -471,10 +471,11 @@ class MIDACO(Optimizer):
 		lkey = self.options['LKEY'][1]
 		liw0 = 2*nn + ll + 1000
 		liw = numpy.array([liw0], numpy.int)
-		iw = numpy.zeros([liw], numpy.int)
+                # jmb made scalar index
+		iw = numpy.zeros([liw][0][0], numpy.int)
 		lrw0 = 200*nn + 2*mm + 1000
 		lrw = numpy.array([lrw0], numpy.int)
-		rw = numpy.zeros([lrw], numpy.float)
+		rw = numpy.zeros([lrw][0][0], numpy.float)
 		
 		
 		# Run MIDACO
